@@ -1,0 +1,60 @@
+body {
+	font-size: 9pt;
+	font-family: Tahoma, Arial, Helvetica, Geneva, sans-serif;
+}
+
+a {color: black; text-decoration: none; display: block; height: 100%; width: 100%;}
+a:hover {background-color: #5AB7E3; color: white;}
+p {margin: 6px 0px;}
+
+button {height: 24px;}
+
+table {border-collapse: collapse; background-color: white;}
+
+table > tbody > tr > th,
+table > tbody > tr > td {border: 1px solid #AAAAAA; padding: 2px 3px;}
+table > thead > tr > th {padding: 3px;}
+
+tr {background-color: white; text-align: center;}
+td[bgcolor="#cccccc"] {font-weight: bold;}
+
+#default_time {
+	position: absolute; 
+	background-color: #fff;
+	display: none;
+	border: 1px solid #C1C1C1;
+	box-shadow: 1px 1px 1px 1px #C1C1C1;
+}
+#default_time > ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#default_time > ul > li {
+	cursor: pointer;
+	color: #444;
+	padding: 4px 5px;
+}
+#default_time > ul > li:hover {
+	background-color: #B4D3FA;
+}
+
+.header-block {
+	margin: 5px;
+	font-size: 11pt;
+	width: 100%;
+}
+
+.clip {
+	width: 190px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ui-state-default {width: 75%;}
+.ui-datepicker-trigger {margin: 0px 0px 0px 3px;}
+
+.print {display: none;}
+.noprint {display: block;}

@@ -1,0 +1,34 @@
+body {
+	font-size: 11px;
+	font-family: Arial, Tahoma, Arial, Helvetica, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+table {border-collapse: collapse; background-color: white;}
+
+table > tbody > tr > th,
+table > tbody > tr > td {border: 1px solid black; padding: 0px 1px;}
+
+a {text-decoration: none; color: black; display: block; margin: 0px;}
+
+.noprint {display: none;}
+.print {display: block;}
+
+.header-block {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 8px 0px;
+}
+
+.clip {
+	width: 170px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@page {
+	margin: 0.8cm;
+}
