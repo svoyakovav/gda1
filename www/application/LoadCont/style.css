@@ -1,0 +1,50 @@
+#MenuLeft {width: 180px; margin: 6px;}
+#MenuLeft a {text-decoration: none;}
+#MenuLeft div {padding: 6px;}
+#MenuLeft ul {list-style-type: disc;}
+.MenuLeftBlock01 {border: 1px solid #CFD4D8; background: #EFEFEF;}
+
+.LineLeft {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(100,100,100,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+	background-image:    -moz-linear-gradient(left, rgba(100,100,100,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+	background-image:     -ms-linear-gradient(left, rgba(100,100,100,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+	background-image:      -o-linear-gradient(left, rgba(100,100,100,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+}
+
+#ButUpdate {
+	width: 110px;
+	height: 24px;
+}
+
+/* #################### */
+
+.divCreateLot {display: none;}
+
+.ItemCustom {border: 1px solid #BCBCBC; height: 21px;}
+.ItemCustom:disabled {background: #E5E5E5;}
+.ItemCustom:enabled {background: #FFFFFF;}
+fieldset[class="ItemCustom"] {border: 0;}
+
+#apex_layout_1183578007736275831 {margin: auto;}
+#apex_layout_1180456220112310306 {margin: auto;}
+#MainDiv {overflow-y: scroll;}
+
+/* #################### */
+
+#MenuFront {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border: 1px solid black;
+	box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.6);
+	background: #F0F0FC;
+	padding: 3px;
+	/*width: 280px; z-index: 1000;*/
+	display: none;
+}
+
+#MenuFront td {height: 21px;}
+#MenuFront a {color: black; text-decoration: none; display: block; height: 100%; width: 100%;}
+#MenuFront a:hover {background-color: #5AB7E3; color: white;}

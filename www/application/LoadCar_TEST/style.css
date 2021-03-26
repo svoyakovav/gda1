@@ -1,0 +1,53 @@
+	#menuLeft {width: 180px; margin: 6px;}
+	#menuLeft a {text-decoration: none;}
+	#menuLeft div {padding: 6px;}
+	#menuUserBlock {border: 1px solid #CFD4D8; background: #EFEFEF;}
+	#menuItemBlock ul {list-style-type: disc;}
+	#menuItemBlock hr {
+		border: 0;
+		height: 1px;
+		background-image: -webkit-linear-gradient(left, rgba(160,160,160,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+		background-image:    -moz-linear-gradient(left, rgba(160,160,160,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+		background-image:     -ms-linear-gradient(left, rgba(160,160,160,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+		background-image:      -o-linear-gradient(left, rgba(160,160,160,1), rgba(0,0,0,0.25), rgba(0,0,0,0));
+	}
+	
+	.MenuList ul {list-style: none; margin: 0; padding: 0;}
+	.MenuList ul li {margin: 0; padding: 0; background-color: #fff; display: block;}
+	.MenuList ul li a {color: #333; text-decoration: none; font-size: 12px; display: block; padding: 5px;}
+	.MenuList ul li a:hover {background-color: #eee;}
+	
+	/* ############################ */
+	
+	.modalItem {border: 1px solid #BCBCBC; height: 21px;}
+	.modalItem:disabled {background: #E5E5E5;}
+	.modalItem:enabled {background: #FFFFFF;}
+	fieldset[class="modalItem"] {border: 0;}
+	
+	/* ############################ */
+	
+	.divCreateLot {display: none;}
+	caption {line-height: 2;}
+	
+	/* ############################ */
+	
+	#menuFront {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		border: 1px solid black;
+		box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.6);
+		background: #F0F0FC;
+		padding: 3px;
+		/*width: 280px; z-index: 1000;*/
+		display: none;
+	}
+	
+	#menuFront td {height: 21px;}
+	#menuFront a {color: black; text-decoration: none; display: block; height: 100%; width: 100%;}
+	#menuFront a:hover {background-color: #5AB7E3; color: white;}
+	
+	#apex_layout_947974812392337010 {margin: auto;}
+	#divFront {overflow-y: scroll;}
+	
+	/* ############################ */

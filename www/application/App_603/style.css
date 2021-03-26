@@ -1,0 +1,31 @@
+.nsi_prod_2  {background-color:lightblue;}
+
+table.nsi_prod_rep  {
+/*font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+border-collapse: collapse;*/
+text-align: center;
+}
+table.nsi_prod_rep th{
+background: #AFCDE7;
+/*color: white;*/
+padding: 5px;
+}
+/*th.nsi_prod_rep, td.nsi_prod_rep {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: white;
+}*/
+table.nsi_prod_rep td {
+background: #DFF5FF;
+}
+tr.nsi_prod_rep_total td {
+background: #98FB98;
+}
+tr.nsi_prod_rep_warn td {
+background: #FFCECE;
+}
+/*th.nsi_prod_rep:first-child, td.nsi_prod_rep:first-child {
+text-align: left;
+}
+*/

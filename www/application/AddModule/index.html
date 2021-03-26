@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Доп. модуль АСУТЛ</title>
+		<script type="text/javascript" src="/libraryes/jquery-2.2.4.min.js"></script>
+		<link type="text/css" href="/libraryes/jquery-ui-1.11.4.base/jquery-ui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="/libraryes/jquery-ui-1.11.4.base/jquery-ui.min.js"></script>
+		
+		<script type="text/javascript" src="script.js"></script>
+		<style type="text/css">
+		  body {
+		    font-family: Arial, 'Times New Roman', Helvetica, sans-serif;
+			font-size: 14px;
+			line-height: 1.2;
+		  }
+		  		  
+		  a img {
+		    border: none; /* Убираем рамку */
+		  }
+		  
+		  .ban_layer {
+			background: url(http://172.20.20.103:8080/images/icons/fence.png) 0 0 repeat;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			opacity: 0.30; /* Значение прозрачности */
+			filter: alpha(Opacity=30); /* Прозрачность в IE */
+		  }
+		  
+		  .key_layer {
+			box-shadow: 0px 0px 13px 3px rgba(0,0,0,1);
+			background: #EEEEEE;
+			padding: 2px;
+			left: calc(50% - 100px);
+			top: calc(50% - 30px);
+			position: absolute;
+		    z-index: 2;
+		  }
+		</style>
+	</head>
+    <body>
+	<form action="">
+		<div id="QueryResult" title="Результат запроса"></div>
+		
+		<table border="0" align="center" cellspacing="1" cellpadding="4" bgcolor="#AAAAAA">
+		<!-- ########## BLOCK_1 ############ -->
+		<tr bgcolor="#CFE0F1"><td align="center"><b><font size="3">Вагоны</font></b></td></tr>
+		<tr bgcolor="#F2F2F5"><td>
+		  <font size="2"><b>Проверка подбора в суточное задание</b></font><br>
+		  <label>Номер вагона <input type="text" size="10" id="BL1_CAR_NUMBER" autofocus></label>&nbsp;
+		  <label>Номер суточного <input type="text" size="8" id="BL1_TASK_NUMBER"></label>&nbsp;
+		  <button type="button" onClick="javascript:query('CheckCarBlock1');">Проверить</button>
+		</td></tr>
+		<tr bgcolor="#F2F2F5"><td>
+		<font size="2"><b>Информация по операциям пользователей</b></font><br>
+		  <label>Номер операции <input type="text" size="10" id="BL1_OPERATION_NUMBER"></label>&nbsp;
+		  <button type="button" onClick="javascript:query('CheckOpBlock1');">Проверить</button>
+		</td></tr>
+		<!-- ########## BLOCK_2 ############ -->
+		<tr bgcolor="#CFE0F1"><td align="center"><b><font size="3">Контейнера</font></b></td></tr>
+		<tr bgcolor="#F2F2F5"><td>
+		  <font size="2"><b>Проверка подбора в суточное задание</b></font><br>
+		  <label>Номер контейнера <input type="text" size="14" id="BL2_CONT_NUMBER"></label>&nbsp;
+		  <label>Номер суточного <input type="text" size="8" id="BL2_TASK_NUMBER"></label>&nbsp;
+		  <button type="button" onClick="javascript:query('CheckContBlock2');">Проверить</button>
+		</td></tr>
+		<tr bgcolor="#F2F2F5"><td>
+		  <font size="2"><b>Информация по операциям пользователей</b></font><br>
+		  <label>Номер операции <input type="text" size="10" id="BL2_OPERATION_NUMBER"></label>&nbsp;
+		  <button type="button" onClick="javascript:query('CheckOpBlock2');">Проверить</button>
+		</td></tr>
+		<!-- ########## BLOCK_3 ############ -->
+		<tr bgcolor="#CFE0F1"><td align="center"><b><font size="3">Заказы на отгрузку</font></b></td></tr>
+		<tr bgcolor="#F2F2F5"><td>
+		  <font size="2"><b>Проверка импорта в АСУТЛ</b></font><br>
+		  <label>Номер заказа <input type="text" size="10" id="BL3_HEADER_NUMBER"></label>
+		  <input type="text" size="2" id="BL3_LINE_NUMBER">&nbsp;
+		  <button type="button" onClick="javascript:query('CheckOrderBlock3');">Проверить</button>&nbsp;
+		  <button type="button" onClick="javascript:query('CheckPartyBlock3');">Данные по контрагенту из OeBS</button>
+		</td></tr>
+		<!-- ########## BLOCK_4 ############ -->
+		<tr bgcolor="#CFE0F1"><td align="center"><b><font size="3">Администрирование</font></b></td></tr>
+		<tr bgcolor="#F2F2F5"><td style="position: relative;">
+		  
+		  <font size="2"><b>Справочники интеграции с OeBS</b></font><br>
+		  <div align="center" style="margin: 6px">
+			<div id="DirIntegration"></div>
+			<button type="button" tabindex="-1" id="ButSelectDirInt" onClick="javascript:query('SelectDirIntBlock4'); disTimeItem(this.id, 3000);">Обновить таблицу</button>&nbsp;
+			<button type="button" tabindex="-1" id="ButUpdateDirInt" onClick="javascript:query('UpdateDirIntBlock4'); disTimeItem(this.id, 3000);">Принудительно обновить справочники</button>
+		  </div>
+		  <font size="2"><b>Проверка последовательности следования вагонов</b></font><br>
+		  <table border="0" cellspacing="5" cellpadding="1" align="center">
+		    <tr>
+			  <td align="center"><input type="hidden" id="BL4_CAR_NUMBER_SEQ_ID">
+								 <input type="text" id="BL4_CAR_NUMBER_PSEQ" size="15" placeholder="Предыдущий" disabled></td>
+			  <td><img src="http://172.20.20.103:8080/images/icons/Colored/arrow_back.gif"></td>
+			  <td align="center"><input type="text" id="BL4_CAR_NUMBER_SEQ" tabindex="-1" placeholder="Номер вагона" size="15"></td>
+			  <td><img src="http://172.20.20.103:8080/images/icons/Colored/arrow_next.gif"></td>
+			  <td align="center"><input type="text" id="BL4_CAR_NUMBER_NSEQ" size="15" placeholder="Следующий" disabled></td>
+			</tr>
+			<tr>
+			  <td align="center"><button id="But1SeqBL4" type="button" tabindex="-1" disabled style="width: 110px;" onClick="javascript:query('DeleteCarPSeqBlock4');">Удалить</button></td><td></td>
+			  <td align="center"><button id="But2SeqBL4" type="button" tabindex="-1" onClick="javascript:query('SelectCarSeqBlock4');">Вывести данные</button></td><td></td>
+			  <td align="center"><button id="But3SeqBL4" type="button" tabindex="-1" disabled style="width: 110px;" onClick="javascript:query('DeleteCarNSeqBlock4');">Удалить</button></td>
+			</tr>
+		  </table>
+		  <div id="LayerBanAdmin" class="ban_layer"></div>
+		  <div id="LayerKeyAdmin" class="key_layer">
+			<table border="0" cellpadding="2">
+			  <tr><td align="right">Логин</td><td colspan="2"><input type="text" size="16" value="ASUTL" disabled></td></tr>
+			  <tr>
+			    <td align="right">Пароль</td><td><input id="PassAdmin" type="password" size="12"></td>
+				<td align="center"><a href="javascript:login('ASUTL');"><img src="http://172.20.20.103:8080/images/icons/key_16x16.ico" alt="Вход" title="Вход"></a></td>
+			  </tr>
+			</table>
+		  </div>
+		</td></tr>
+		<!-- ########## BLOCK_5 ############ -->
+		<tr bgcolor="#CFE0F1"><td align="center"><b><font size="3">Задания на отгрузку</font></b></td></tr>
+		<tr bgcolor="#F2F2F5"><td style="position: relative;">
+		  <p>
+		  <font size="2"><b>Корректировка суточных заданий</b></font><br>
+		  <label>Номер суточного <input type="text" tabindex="-1" size="10" id="BL5_TASK_NUMBER"></label>&nbsp;
+		  <button type="button" id="ButTaskNumBlock5" tabindex="-1" onClick="javascript:query('SelectTaskBlock5');">Далее</button>
+		  </p>
+		  <div id="LayerBanSbyt" class="ban_layer"></div>
+		  <div id="LayerKeySbyt" class="key_layer">
+			<table border="0" cellpadding="2">
+			  <tr><td align="right">Логин</td><td colspan="2"><input type="text" size="16" value="SBYTOVIK" disabled></td></tr>
+			  <tr>
+			    <td align="right">Пароль</td><td><input id="PassSbyt" type="password" size="12"></td>
+				<td align="center"><a href="javascript:login('SBYTOVIK');"><img src="http://172.20.20.103:8080/images/icons/key_16x16.ico" alt="Вход" title="Вход"></a></td>
+			  </tr>
+			</table>
+		  </div>
+		</td></tr>
+		<!-- ###################### -->
+		</table>
+	
+	</form>
+    </body>
+</html>

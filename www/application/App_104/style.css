@@ -1,0 +1,57 @@
+
+table.vkinfo th {
+/*font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+border-collapse: collapse;*/
+text-align: center;
+font-size: 1.4rem;
+font-weight:normal;
+padding: 5px;
+}
+/*
+table.vkinfo th:first-child {
+text-align: left;
+}*/
+table.vkinfo thead{;
+background: #AFCDE7;
+}
+th.vkinfo-agreed  {
+background: #8affbd;
+}
+th.vkinfo-not-agreed {
+background: #fddddd;
+}
+th.vkinfo-work  {
+background: #fae896;
+}
+/*th.nsi_prod_rep, td.nsi_prod_rep {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: white;
+}
+table.vkinfo td {
+background: #DFF5FF;
+}*/
+
+/*th.nsi_prod_rep:first-child, td.nsi_prod_rep:first-child {
+text-align: left;
+}
+*/
+.file_load  .form-group{}
+.file_load  input[type=file]{outline:0;opacity:0;pointer-events:none;user-select:none;font-size:0.1px; height:0.1px}
+.file_load .label{width:110px;border:2px dashed grey;border-radius:5px;display:block;transition:border 300ms ease;cursor:pointer;text-align:center}
+.file_load .label i{display:block;font-size:25px}
+.file_load .label i,.file_load .label .title{color:grey;transition:200ms color}
+.file_load .label:hover{border:2px solid #000}
+.file_load .label:hover i,.example-1 .label:hover .title{color:#000}
+
+.approved {
+	color: red;
+	}
+	
+.aggreed {
+	color: green;
+	}
+	
+	
+	

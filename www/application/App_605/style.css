@@ -1,0 +1,4 @@
+.car-info  {float:left; background-color:lightblue;  padding-left:3px ; padding-right:3px ;}
+.car-info-life-cycle  {float:left; background-color:lightgreen;  padding-left:5px ; padding-right:5px ;}
+.car-info-head  {float:left; padding-left:10px;}
+.car-info-err {float:left; padding-left:5px; padding-right:5px ; background-color:lightpink;}

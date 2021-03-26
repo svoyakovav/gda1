@@ -1,0 +1,77 @@
+<html> 
+     <head> <title>Справка пользователя</title> </head> 
+ <body>
+<table style="width: 1000px;" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="#000000">
+	<caption><i><b>Список функций</b></i></caption>
+	<tbody>
+		<tr>
+			<td style="width: 300px;" bgcolor="#d3edf6" style="text-align: center;">Функция</td>
+			<td bgcolor="#d3edf6" style="text-align: center;">Описание</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td style="text-align: top;" valign="top"><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/icons/edit_col_32x24.GIF"> - выбор полей</td>
+			<td>Данная функция служит для отображения\скрытия полей и изменения их местоположения в отчете. <br>После нажатия на иконку откроется окно с выбором полей:
+			<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/column1.png">
+			<div class="spoil">
+			<div class="smallfont"><input type="button" value="Подробнее"; class="input-button" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Свернуть'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Подробнее'; }"/>
+			</div><div class="alt2"><div style="display: none; text-align:center;">           
+<br>Ниже описание каждой кнопки на панели выбора полей
+<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/column1_1.png">
+</div>
+</div>
+</div>    
+			</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td style="text-align: left;" valign="top"><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/icons/filter_32.PNG"> - выбор фильтров</td>
+			<td>По каждому полю в отчете можно установить фильтры.
+			<br>Окно фильтров:
+			<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/filter1.PNG">
+			<div class="spoil">
+			<div class="smallfont"><input type="button" value="Подробнее"; class="input-button" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Свернуть'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Подробнее'; }"/>
+			</div><div class="alt2"><div style="display: none; text-align:left;">           
+			<br>После нажатия на кнопку фильтры откроется окно с фильтрами:
+<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/filter3.png">
+<br>Так же фильтры можно устанавливать кликнув по названию нужного поля, например необходимо найти список вагонов находящихся на станции "ЗЛАТОУСТ", для этого нажимаем на наше поле (в случае примера это "Ст. дислокации") и нам выпадает список станций из показанного отчета. 
+<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/filter4.png">
+<br>Видим что список большой, поэтому воспользуемся строкой поиска и начнем вводить нашу станцию:
+<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/filter5.png">
+<br>После того как мы выбрали нашу станцию, фильтр автоматически создается и на выводе формируются данные по нему.
+<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/filter6.png">
+<br>Кликнув по фильтру его можно отредактировать, выбрав другое значение\изменив выражение
+<br>Так же справа от фильтра вы видите галочку и кнопку <img src="http://172.20.20.103:8080/application/Manuals/HowToReport/icons/no_filter.gif">. Когда галочка активна - фильтр работает, не активана - фильтр отменяется. А кнопка <img src="http://172.20.20.103:8080/application/Manuals/HowToReport/icons/no_filter.gif"> удаляет фильтр.
+</div>
+</div>
+</div>    
+			</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td style="text-align: left;" valign="top"><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/icons/disk_32.GIF"> - сохранить форму отчета</td>
+			<td>После установления необходимых фильтров и редактирования метстоположения полей в отчете вы можете сохранить все текущие настройки по нажатию на эту кнопку, задав определенное название.
+			<br>Окно:
+			<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/save1.png">
+						<div class="spoil">
+			<div class="smallfont"><input type="button" value="Подробнее"; class="input-button" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Свернуть'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Подробнее'; }"/>
+			</div><div class="alt2"><div style="display: none; text-align:left;">           
+			<br> Для того чтобы сохранить формат отчета, в открывшимся окне введите удобное для вас "Имя" отчета, например "Цех 25". Вы так же можете указать галочку "Публичный", чтобы сохраняемый вами формат отчета могли видеть не только вы, но и другие пользователи. "Описание" - не обязательное поле, оно служит для доп. информации, которую вы укажите в этом поле. После сохранения отчета, он попадет в список "Отчеты" справа от поисковой строки:
+			<br><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/screens/save2.png">
+			<br>Сохраненные форматы можно удалить, для этого выбирите нужный отчет и нажмите кнопку "Удалить отчет" (<img src="http://172.20.20.103:8080/application/Manuals/HowToReport/icons/report_remove_20x18.gif">).
+			
+</div>
+</div>
+</div>  
+			</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td style="text-align: left;" valign="top"><img src="http://172.20.20.103:8080/application/Manuals/HowToReport/icons/download_32x24.GIF"> - выгрузка отчета</td>
+			<td>В любой момент вы имеете возможность выгрузить сформированный вами отчет в формате CSV(EXCEL) на ваш компьютер.</td>
+		</tr>
+
+	</tbody>
+	
+
+</table>
+
+
+ </body>
+</html>
